@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JDF xmlns="http://www.CIP4.org/JDFSchema_1_1" 
+     ID="JDF_Sample_001" 
+     Status="Waiting" 
+     Type="Product" 
+     Version="1.3" 
+     JobPartID="000.000.00333" 
+     DescriptiveName="Simple Flyer Job">
+    
+    <!-- Resource Pool: Contains the resources used in this job -->
+    <ResourcePool>
+        <!-- Component describing the final product -->
+        <Component ID="Res_Component_001" Class="Quantity" Status="Available" ComponentType="Sheet" />
+        
+        <!-- Media describing the paper to be used -->
+        <Media ID="Res_Media_001" Class="Consumable" Status="Available" DescriptiveName="Glossy A4 Paper" Dimension="595.28 841.89" Weight="100"/>
+    </ResourcePool>
+
+    <!-- Resource Link Pool: Links the resources to the process -->
+    <ResourceLinkPool>
+        <ComponentLink rRef="Res_Component_001" Usage="Output"/>
+        <MediaLink rRef="Res_Media_001" Usage="Input"/>
+    </ResourceLinkPool>
+</JDF>
